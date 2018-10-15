@@ -1,0 +1,22 @@
+.page-header {
+  padding: 15px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+a.nav-link {
+  color: #ccc;
+}
+
+a.nav-link.active,
+a.nav-link:hover {
+  color: #fff;
+}

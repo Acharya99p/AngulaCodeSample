@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="col-12">
+    <div class="col-4 offset-4 no-padding box">
+      <div class="box-title">
+        <h4 class="no-margin">
+          User Registration
+        </h4>
+      </div>
+
+      <div class="box-body">
+        <app-user-registration-form [user]="user"
+          (userFormSubmitted)="createUser($event)"></app-user-registration-form>
+      </div>
+    </div>
+  </div>
+</div>

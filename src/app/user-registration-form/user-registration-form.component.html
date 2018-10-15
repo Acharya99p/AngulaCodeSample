@@ -1,0 +1,84 @@
+<!-- Cumulative errors on submit-->
+<div *ngIf="submitted"
+  class="text-danger">
+  <ul class="error-list no-margin">
+    <li *ngIf="email.errors">
+      <small *ngIf="email.errors.required"
+        class="text-danger">Email is a required field.</small>
+      <small *ngIf="email.errors.email"
+        class="text-danger">Please enter a valid email address.</small>
+    </li>
+    <li *ngIf="password.errors">
+      <small *ngIf="password.errors.required"
+        class="text-danger">Password is a required field.</small>
+      <small *ngIf="password.errors.invalidPassword"
+        class="text-danger">
+        Password must be 8 characters long having atleast one character and one special character.
+      </small>
+    </li>
+  </ul>
+</div>
+
+<div>
+  <form [formGroup]="userForm"
+    (ngSubmit)="submitUserForm()">
+
+    <div class="form-group">
+      <label for="email">Email </label>
+      <input type="email"
+        id="email"
+        class="form-control"
+        formControlName="email"
+        required
+        email />
+
+      <div *ngIf="email.errors && email.touched && email.dirty">
+        <small *ngIf="email.errors.required"
+          class="text-danger">Email is a required field.</small>
+        <small *ngIf="email.errors.email"
+          class="text-danger">Please enter a valid email address.</small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="password">Password </label>
+      <input type="password"
+        id="password"
+        class="form-control"
+        formControlName="password"
+        required />
+
+      <div *ngIf="password.errors && password.touched && password.dirty">
+        <small *ngIf="password.errors.required"
+          class="text-danger">Password is a required field.</small>
+        <small *ngIf="password.errors.invalidPassword"
+          class="text-danger">
+          Password must be 8 characters long having atleast one character and one special character.
+        </small>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="subscription">Subscription </label>
+      <select id="subscription"
+        class="form-control"
+        formControlName="subscription">
+        <option value="basic">Basic</option>
+        <option value="advanced">Advanced</option>
+        <option value="pro">Pro</option>
+      </select>
+    </div>
+
+    <div class="mt-3">
+      <button type="submit"
+        class="btn btn-primary">
+        Submit
+      </button>
+      <button type="button"
+        class="btn btn-outline-secondary ml-3"
+        (click)="clearForm()">
+        Clear
+      </button>
+    </div>
+  </form>
+</div>

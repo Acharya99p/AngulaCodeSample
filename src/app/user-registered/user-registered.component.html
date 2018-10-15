@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-4 offset-4 no-padding box">
+    <div class="box-title">
+      <h4 class="no-margin">Success</h4>
+    </div>
+
+    <div *ngIf="user" class="box-body">
+      <p>User registered successfully with the below details:-</p>
+      <p>
+        <span>
+          Email:
+        </span>
+        <span>
+          {{user.email}}
+        </span>
+      </p>
+      <p>
+        <span>
+          Password:
+        </span>
+        <span>
+          {{user.password}}
+        </span>
+      </p>
+      <p>
+        <span>
+          Subscription:
+        </span>
+        <span>
+          {{user.subscription}}
+        </span>
+      </p>
+    </div>
+  </div>
+</div>

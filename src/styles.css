@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.box {
+  padding: 15px;
+  border-bottom: 2px solid #fefefe;
+  box-shadow: 0 5px 5px #efefef;
+}
+
+.box .box-title,
+.box .box-body {
+  padding: 15px;
+}
+
+.box .box-title {
+  background-color: #fcfcfc;
+  border-bottom: 2px solid #fafafa;
+}
